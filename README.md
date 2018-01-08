@@ -1,207 +1,56 @@
-Dompdf
-======
+> You might also like [Caret](http://caret.io?ref=parsedown) - our Markdown editor for Mac / Windows / Linux.
 
-[![Build Status](https://travis-ci.org/dompdf/dompdf.png?branch=master)](https://travis-ci.org/dompdf/dompdf)
-[![Latest Stable Version](https://poser.pugx.org/dompdf/dompdf/v/stable.png)](https://packagist.org/packages/dompdf/dompdf)
-[![Total Downloads](https://poser.pugx.org/dompdf/dompdf/downloads.png)](https://packagist.org/packages/dompdf/dompdf)
-[![Latest Unstable Version](https://poser.pugx.org/dompdf/dompdf/v/unstable.png)](https://packagist.org/packages/dompdf/dompdf)
-[![License](https://poser.pugx.org/dompdf/dompdf/license.png)](https://packagist.org/packages/dompdf/dompdf)
- 
-**Dompdf is an HTML to PDF converter**
+## Parsedown
 
-At its heart, dompdf is (mostly) a [CSS 2.1](http://www.w3.org/TR/CSS2/) compliant
-HTML layout and rendering engine written in PHP. It is a style-driven renderer:
-it will download and read external stylesheets, inline style tags, and the style
-attributes of individual HTML elements. It also supports most presentational
-HTML attributes.
+[![Build Status](https://img.shields.io/travis/erusev/parsedown/master.svg?style=flat-square)](https://travis-ci.org/erusev/parsedown)
+<!--[![Total Downloads](http://img.shields.io/packagist/dt/erusev/parsedown.svg?style=flat-square)](https://packagist.org/packages/erusev/parsedown)-->
 
-*This document applies to the latest stable code which may not reflect the current 
-release. For released code please
-[navigate to the appropriate tag](https://github.com/dompdf/dompdf/tags).*
+Better Markdown Parser in PHP
 
-----
+[Demo](http://parsedown.org/demo) |
+[Benchmarks](http://parsedown.org/speed) |
+[Tests](http://parsedown.org/tests/) |
+[Documentation](https://github.com/erusev/parsedown/wiki/)
 
-**Check out the [demo](http://pxd.me/dompdf/www/examples.php) and ask any
-question on [StackOverflow](http://stackoverflow.com/questions/tagged/dompdf) or
-on the [Google Groups](http://groups.google.com/group/dompdf).**
+### Features
 
-Follow us on [![Twitter](http://twitter-badges.s3.amazonaws.com/twitter-a.png)](http://www.twitter.com/dompdf) or 
-[![Follow us on Google+](https://ssl.gstatic.com/images/icons/gplus-16.png)](https://plus.google.com/108710008521858993320?prsrc=3).
+* One File
+* Super Fast
+* Extensible
+* [GitHub flavored](https://help.github.com/articles/github-flavored-markdown)
+* Tested in 5.3 to 7.1 and in HHVM
+* [Markdown Extra extension](https://github.com/erusev/parsedown-extra)
 
----
+### Installation
 
+Include `Parsedown.php` or install [the composer package](https://packagist.org/packages/erusev/parsedown).
 
+### Example
 
-## Features
+``` php
+$Parsedown = new Parsedown();
 
- * Handles most CSS 2.1 and a few CSS3 properties, including @import, @media &
-   @page rules
- * Supports most presentational HTML 4.0 attributes
- * Supports external stylesheets, either local or through http/ftp (via
-   fopen-wrappers)
- * Supports complex tables, including row & column spans, separate & collapsed
-   border models, individual cell styling
- * Image support (gif, png (8, 24 and 32 bit with alpha channel), bmp & jpeg)
- * No dependencies on external PDF libraries, thanks to the R&OS PDF class
- * Inline PHP support
- * Basic SVG support
- 
-## Requirements
-
- * PHP version 5.3.0 or higher
- * DOM extension
- * GD extension
- * MBString extension
- * php-font-lib
- * php-svg-lib
-
-### Recommendations
-
- * OPcache (OPcache, XCache, APC, etc.): improves performance
- * IMagick or GMagick extension: improves image processing performance
-
-Visit the wiki for more information:
-https://github.com/dompdf/dompdf/wiki/Requirements
-
-## About Fonts & Character Encoding
-
-PDF documents internally support the following fonts: Helvetica, Times-Roman,
-Courier, Zapf-Dingbats, & Symbol. These fonts only support Windows ANSI
-encoding. In order for a PDF to display characters that are not available in
-Windows ANSI you must supply an external font. Dompdf will embed any referenced
-font in the PDF so long as it has been pre-loaded or is accessible to dompdf and
-reference in CSS @font-face rules. See the
-[font overview](https://github.com/dompdf/dompdf/wiki/About-Fonts-and-Character-Encoding)
-for more information on how to use fonts.
-
-The [DejaVu TrueType fonts](http://dejavu-fonts.org) have been pre-installed
-to give dompdf decent Unicode character coverage by default. To use the DejaVu
-fonts reference the font in your stylesheet, e.g. `body { font-family: DejaVu
-Sans; }` (for DejaVu Sans). The following DejaVu 2.34 fonts are available:
-DejaVu Sans, DejaVu Serif, and DejaVu Sans Mono.
-
-## Easy Installation
-
-### Install with composer
-
-To install with [Composer](https://getcomposer.org/), simply require the
-latest version of this package.
-
-```bash
-composer require dompdf/dompdf
+echo $Parsedown->text('Hello _Parsedown_!'); # prints: <p>Hello <em>Parsedown</em>!</p>
 ```
 
-Make sure that the autoload file from Composer is loaded.
+More examples in [the wiki](https://github.com/erusev/parsedown/wiki/) and in [this video tutorial](http://youtu.be/wYZBY8DEikI).
 
-```php
-// somewhere early in your project's loading, require the Composer autoloader
-// see: http://getcomposer.org/doc/00-intro.md
-require 'vendor/autoload.php';
+### Questions
 
-```
+**How does Parsedown work?**
 
-### Download and install
+It tries to read Markdown like a human. First, it looks at the lines. It’s interested in how the lines start. This helps it recognise blocks. It knows, for example, that if a line starts with a `-` then perhaps it belongs to a list. Once it recognises the blocks, it continues to the content. As it reads, it watches out for special characters. This helps it recognise inline elements (or inlines).
 
-Download an archive of dompdf and extract it into the directory where dompdf
-will reside
- * You can download stable copies of dompdf from
-   https://github.com/dompdf/dompdf/releases
- * Or download a nightly (the latest, unreleased code) from
-   http://eclecticgeek.com/dompdf
+We call this approach "line based". We believe that Parsedown is the first Markdown parser to use it. Since the release of Parsedown, other developers have used the same approach to develop other Markdown parsers in PHP and in other languages.
 
-Require dompdf, libraries, and helper functions in your PHP:
+**Is it compliant with CommonMark?**
 
-```php
-// include autoloader
-require_once 'dompdf/autoload.inc.php';
-```
+It passes most of the CommonMark tests. Most of the tests that don't pass deal with cases that are quite uncommon. Still, as CommonMark matures, compliance should improve.
 
-### Install with git
+**Who uses it?**
 
-From the command line, switch to the directory where dompdf will reside and run
-the following commands:
+[phpDocumentor](http://www.phpdoc.org/), [October CMS](http://octobercms.com/), [Bolt CMS](http://bolt.cm/), [Kirby CMS](http://getkirby.com/), [Grav CMS](http://getgrav.org/), [Statamic CMS](http://www.statamic.com/), [Herbie CMS](http://www.getherbie.org/), [RaspberryPi.org](http://www.raspberrypi.org/), [Symfony demo](https://github.com/symfony/symfony-demo) and [more](https://packagist.org/packages/erusev/parsedown/dependents).
 
-```sh
-git clone https://github.com/dompdf/dompdf.git
-cd dompdf
+**How can I help?**
 
-git clone https://github.com/PhenX/php-font-lib.git lib/php-font-lib
-cd lib/php-font-lib
-git checkout 0.4
-cd ..
-
-git clone https://github.com/PhenX/php-svg-lib.git php-svg-lib
-cd php-svg-lib
-git checkout v0.1
-```
-
-Require dompdf, libraries, and helper functions in your PHP:
-
-```php
-// include autoloader
-require_once 'dompdf/autoload.inc.php';
-```
-
-## Quick Start
-
-Just pass your HTML in to dompdf and stream the output:
-
-```php
-// reference the Dompdf namespace
-use Dompdf\Dompdf;
-
-// instantiate and use the dompdf class
-$dompdf = new Dompdf();
-$dompdf->loadHtml('hello world');
-
-// (Optional) Setup the paper size and orientation
-$dompdf->setPaper('A4', 'landscape');
-
-// Render the HTML as PDF
-$dompdf->render();
-
-// Output the generated PDF to Browser
-$dompdf->stream();
-```
-
-### Setting Options
-
-Set options during dompdf instantiation:
-
-```php
-use Dompdf\Dompdf;
-use Dompdf\Options;
-
-$options = new Options();
-$options->set('defaultFont', 'Courier');
-$dompdf = new Dompdf($options);
-```
-
-or at run time
-
-```php
-use Dompdf\Dompdf;
-
-$dompdf = new Dompdf();
-$dompdf->set_option('defaultFont', 'Courier');
-```
-
-See [Dompdf\Options](src/Options.php) for a list of available options.
-
-
-## Limitations (Known Issues)
-
- * Dompdf is not particularly tolerant to poorly-formed HTML input. To avoid
-   any unexpected rendering issues you should either enable the built-in HTML5
-   parser at runtime (`$dompdf->set_option('isHtml5ParserEnabled', true);`) 
-   or run your HTML through a HTML validator/cleaner (such as
-   [Tidy](http://tidy.sourceforge.net) or the
-   [W3C Markup Validation Service](http://validator.w3.org)).
- * Large files or large tables can take a while to render.
- * CSS float is in development and may not produce the desired result
-
----
-
-[![Donate button](https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif)](http://goo.gl/DSvWf)
-
-*If you find this project useful, please consider making a donation. Any funds donated will be used to help further development on this project.)*
+Use it, star it, share it and if you feel generous, [donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=528P3NZQMP8N2).
