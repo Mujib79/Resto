@@ -1,0 +1,535 @@
+.data-table tr td:last-child input[type="button"],
+.data-table tr td:nth-child(5) input{
+  border-radius: 5px;
+  width : auto;
+}
+
+#dashboard tr td:hover{
+  background-color: #fffd1c;
+}
+
+#dashboard tr td {
+  width: 25%;
+  height: 100px;
+  background-color: #fff;
+  border : 3px solid #000;
+}
+
+#dashboard tr td a{
+  text-decoration: none;
+  color: #000;
+  padding: 30px 10px;
+  font-size: 22px;
+  font-family: subjudul;
+  font-weight: bold;
+  padding-left: 70px;
+  display: block;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center left 15px;
+}
+
+#dashboard tr td:hover{
+  background-color: #fffd1c;
+}
+
+
+.data-table tr td:nth-child(1){width : 5%;text-align: right}
+.data-table tr td:nth-child(2){width : 40%;}
+.data-table tr td:nth-child(3){width : 25%;}
+.data-table tr td:nth-child(4){width : 10%;}
+.data-table tr td:nth-child(5){width : 10%; text-align: center;}
+.data-table tr td:nth-child(6){width : 10%; text-align: center;}
+
+.data-table tr th:nth-child(1){width : 5%;}
+.data-table tr th:nth-child(2){width : 40%;}
+.data-table tr th:nth-child(3){width : 25%;}
+.data-table tr th:nth-child(4){width : 10%;}
+.data-table tr th:nth-child(5){width : 20%;}
+
+.visibility tr td:last-child{padding:0px 5px;}
+.visibility tr td:first-child{text-align: center;}
+.visibility tr td input[type="checkbox"]{
+  position: relative;
+  z-index: 5;
+}
+
+.visibility tr:hover td{
+  background-color: #fff;
+}
+
+.visibility tr td{
+  cursor: pointer;
+}
+
+.visibility tr td:first-child{
+  cursor: default;
+}
+
+.panel-header{
+  width : 96%;
+  margin:auto;
+  height: auto;
+  padding : 10px 5px;
+}
+
+.panel-header #judul{
+  width                               : 100%;
+  text-transform                      : capitalize;
+  font-size                           : 30px;
+  word-wrap                           : break-word;
+  background-color                    : #fff;
+  font-weight                         : bold;
+  padding															: 10px 6px;
+  border-radius                       : 5px;
+  border                              : 2px inset #363636;
+  overflow: hidden;
+  min-height: 60px;
+  height: 60px;
+}
+
+.panel-header #judul:hover{
+  box-shadow					                : 0 0 5px rgba(4, 129, 177, 0.5);
+}
+
+.content-edit{
+  width : calc(96% - 8px);
+  margin-left : 2%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding : 10px 5px;
+  background-color : #fff;
+  position : relative;
+  float: left;
+  border: 4px dotted #000;
+}
+
+.image-edit{
+  width : 500px;
+  min-width : 250px;
+  height: 300px;
+  min-height: 150px;
+  background-color : #fff;
+  border: 3px solid #000;
+}
+
+.image-option{
+  width : 480px;
+  min-width : 240px;
+  height: 30px;
+  padding : 10px 10px;
+  background-color: #952828;
+  border : 3px solid #000;
+  border-top : none;
+}
+
+.info{
+  padding : 5px 10px;
+  color : #fff;
+  font-family: calibri;
+  height: 20px;
+}
+
+#path{
+  /*border-radius: 0;
+  font-size: 18px;
+  min-width : none;
+  position : relative;
+  width : 100%;
+  border: none;
+  border-bottom : 3px solid #fff;
+  background-color: none;
+  margin-left: 10px;
+  width : calc(100% - 178px);
+  background-color: #fff;*/
+  display: none;
+}
+
+.image-config,.panel-resep{
+  position: relative;
+  float: left;
+  width : 506px;
+  height : 389px;
+}
+
+.panel-resep{
+  height: 314px;
+  width:  500px;
+  position: absolute;
+  margin-top: -320px;
+  border: 3px solid #000;
+}
+
+.form-isian{
+  width : calc(100% - 515px);
+  /*position : absolute;*/
+  /*float: left;*/
+  min-width : 250px;
+  border: 3px solid #000;
+  color: #fff;
+  margin-left: 509px;
+}
+
+fieldset.form-dish{
+  width : calc(100% - 40px);
+  min-height: 345px;
+  padding: 20px;
+  background-color : #3f3f3f;
+  text-align: left;
+}
+
+fieldset.form-dish textarea{
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 215px;
+}
+
+fieldset.form-dish input[type="text"], fieldset.form-dish input[type="number"],
+fieldset.form-dish select,
+fieldset.form-dish textarea,fieldset.form-dish #rad{
+  margin-bottom: 10px;
+  width : 100%;
+  font-size: 18px;
+}
+
+fieldset.form-dish #rad{
+  padding: 10px;
+  width: calc(100% - 20px);
+  color: #000;
+  border-radius: 10px;
+  background-color: #ddd;
+}
+
+input[type="radio"],fieldset.form-dish label{
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+footer{
+  width : calc(100% - 300px);
+  margin-left: 300px;
+}
+
+.container_crop{
+  width : 98%;
+  margin: auto;
+  position : relative;
+  height : 80%;
+  background-color : #ddd;
+}
+
+#img{
+  width : 100%;
+  height: 100%;
+}
+
+.wrappop{
+  width : 500px;
+  height: 300px;
+  background-color: #2e2e2e;
+}
+
+
+.wrapper{
+  width: 528px;
+  padding: 5px;
+}
+
+.close{
+  right: -20px;
+  top: 5px;
+}
+
+.data-resep{
+  width: 100%;
+  float: left;
+  height: 100%;
+  background-color: #ddd;
+}
+
+button.btn-atur-resep{
+  right: 9px;
+  top: 3px;
+  position: absolute;
+  height: 19px;
+}
+
+.panel-resep div.sub{
+  text-align: center;
+  background-color: #952828;
+  padding: 5px 0px;
+  width: 100%;
+  color: #ffffcc;
+}
+
+#t_resep{
+  border-collapse: collapse;
+}
+
+#t_resep tr td{
+  height: 30px;
+  background-color: #fff;
+}
+
+#t_resep tr td input[type="text"],
+#t_resep tr td input[type="number"]{
+  width: 100%;
+  border-radius: 0px;
+  height: 100%;
+  border: 2px inset #000;
+  background-color: #fff;
+}
+
+#dataresep{
+  height: calc(100% - 29px);
+  background-color: #ddd;
+  overflow-y: auto;
+}
+
+#t_databahan{
+  width: 100%;
+  overflow-y: auto;
+}
+
+#t_databahan tr th{
+  height: 30px;
+}
+
+#t_databahan tr th, #t_databahan tr td{
+  height: 30px;
+  font-size: 15px;
+  border-radius: 0px;
+}
+
+#t_databahan tr td:nth-child(1),
+#t_databahan tr th:nth-child(1){
+  width: 10%;
+}
+
+#t_databahan tr td:nth-child(2){
+  width: 70%;
+  border: none;
+}
+
+#t_databahan tr td:nth-child(3) button{
+  height: 16px;
+  font-size: 12px;
+  margin-top: -4px;
+}
+
+#t_databahan tr td:nth-child(3){
+  width: 20%;
+}
+
+#t_databahan tr td:last-child{
+  padding: 0px 5px;
+}
+
+#t_databahan tr th:nth-child(2){
+  width: 90%;
+}
+
+#tampil-data{
+  overflow-y: auto;
+  border: 3px solid #000;
+  height: 267px;
+}
+
+#editbahanbaku,#addbahanbaku{
+  width: 346px;
+  height: 169px;
+}
+
+#edit-data,#add-data{
+  width: calc(96% - 20px);
+  height: auto;
+  margin: auto;
+  padding: 10px;
+}
+
+#edit-data input[type="text"],
+#add-data input[type="text"]{
+  width: 100%;
+}
+
+#add-data label,
+#edit-data label{
+  color: #fff;
+  text-align: left;
+}
+
+#editbahanbaku button#simpanubahing,
+#addbahanbaku button#simpanadding{
+  margin-top: 4px;
+}
+
+#list-pesan,#daftar-pesanan{
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+#list-pesan{
+  width: calc(30% - 20px);
+  background-color: #ddd;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#daftar-pesanan{
+  width: calc(70% - 10px);
+}
+
+.title-list-pesan{
+  padding: 5px 0px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  float: left;
+  width: 100%;
+  background-color: #952828;
+}
+
+#list-pesan table,
+#daftar-pesanan table{
+  width: 100%;
+}
+
+#list-pesan table tr th,
+#daftar-pesanan table tr th{
+  border-radius: 0px !important;
+  font-size: 16px;
+  padding: 5px 0px;
+}
+
+#list-pesan table tr th,
+#daftar-pesanan table tr th{
+  width: 50%;
+  background-color: #fff;
+  color: #000;
+}
+
+#list-pesan tr:last-child,
+#daftar-pesanan tr:last-child{
+  border-bottom: 4px solid #000;
+}
+
+#list-pesan tr td,
+#daftar-pesanan tr td{
+  text-align: center;
+  cursor: pointer;
+  height: 45px;
+}
+
+#daftar-pesanan tr td:last-child{
+  border: none;
+}
+
+#list-pesan table tr:hover td{
+  background-color: #fff;
+}
+
+#daftar-pesanan tr th:first-child,
+#daftar-pesanan tr td:first-child{
+  width: 40%;
+}
+
+#daftar-pesanan tr td:first-child{
+  text-align: left;
+  border-radius:0px;
+}
+
+#daftar-pesanan tr th:nth-child(2),
+#daftar-pesanan tr td:nth-child(2){
+  width: 15%;
+}
+
+#daftar-pesanan tr td:nth-child(3),
+#daftar-pesanan tr td:nth-child(4),
+#daftar-pesanan tr td:nth-child(5){
+  width: 15%;
+  text-align: center;
+}
+
+#daftar-pesanan tr td:nth-child(3) button,
+#daftar-pesanan tr td:nth-child(4) button,
+#daftar-pesanan tr td:nth-child(5) button{
+  height: 25px;
+}
+
+#daftar-pesanan tr td:last-child{
+  border-radius:0px;
+}
+
+#wrap-table,#wrap-detail{
+  width: 100%;
+  float: left;
+  height: calc(100% - 38px);
+  overflow-y: auto;
+}
+
+#wrap-table .data-table tr td{
+  border-radius : 0px !important;
+}
+
+#wrapdapur{
+  overflow: hidden;
+}
+
+#tampil-catatan{
+  width: 90%;
+  height: 184px;
+  color: #fff;
+  font-size: 26px;
+  padding: 5px 10px;
+  text-align: center;
+  overflow-y: auto;
+}
+
+#popcatatan{
+  height: 265px;
+}
+
+.tableall tr th:nth-child(2),
+.tableall tr td:nth-child(2){
+  width: 35% !important;
+}
+
+.tableall tr th:nth-child(4),
+.tableall tr td:nth-child(4){
+  width: 15% !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .image-config{
+    width: 458px;
+    min-width: none;
+  }
+
+  .image-option{
+    width: calc(100% - 20px);
+  }
+
+  .content-edit{
+    width: calc(96% - 18px);
+  }
+
+  .panel-resep{
+    width: 458px;
+  }
+
+  .form-isian{
+    margin-left: 467px;
+    width: calc(100% - 472px);
+  }
+
+  .image-edit{
+    width: 100%;
+  }
+
+  #rad{
+    font-size: 16px !important;
+  }
+}

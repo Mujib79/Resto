@@ -1,0 +1,16 @@
+body{
+  margin: auto;
+  background-color: #ffffcc;
+}
+
+img{
+  width: 20vw;
+  margin: auto;
+  margin-top: 20vh;
+}
+
+#message{
+  font-size: 3vw;
+  font-family: myresto;
+  font-weight: bold;
+}

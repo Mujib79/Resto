@@ -1,0 +1,216 @@
+.data-table tr td:last-child input[type="button"],
+.data-table tr td:nth-child(5) input{
+  border-radius: 5px;
+  width : auto;
+}
+
+.data-table tr td:nth-child(1){width : 5%;text-align: right}
+.data-table tr td:nth-child(2){width : 35%;}
+.data-table tr td:nth-child(3){width : 25%;text-align: center;}
+.data-table tr td:nth-child(4){width : 10%;}
+.data-table tr td:nth-child(5){width : 15%; text-align: center;}
+.data-table tr td:nth-child(6){width : 10%; text-align: center;}
+
+.data-table tr th:nth-child(1){width : 5%;}
+.data-table tr th:nth-child(2){width : 35%;}
+.data-table tr th:nth-child(3){width : 25%;}
+.data-table tr th:nth-child(4){width : 10%;}
+.data-table tr th:nth-child(5){width : 15%;}
+.data-table tr th:nth-child(6){width : 10%;}
+
+.inp{
+  background-color: #fff !important;
+  width: 100%;
+  height: 100% !important;
+  max-height: none !important;
+  border-radius: 0px !important;
+}
+
+.panel-header{
+  width : 96%;
+  margin:auto;
+  height: auto;
+  padding : 10px 5px;
+}
+
+.panel-content{
+  width: 96%;
+  margin: auto;
+}
+
+#headtbldetail tr:first-child th:first-child{width:5%}
+#headtbldetail tr:first-child th:nth-child(2){width:60%}
+#headtbldetail tr:first-child th:nth-child(3){width:10%}
+#headtbldetail tr:first-child th:nth-child(4){width:25%}
+
+#headtbldetail tr:nth-child(2) th{border-top:4px solid #000;background-color:#db9357}
+#headtbldetail tr:nth-child(2) th:first-child{width:20%}
+#headtbldetail tr:nth-child(2) th:nth-child(2){width:20%}
+#headtbldetail tr:nth-child(2) th:nth-child(3){width:20%;border-right: 4px solid #000}
+
+#headtbldetail tr td:first-child{text-align: center;width:5%}
+#headtbldetail tr td:nth-child(2),
+#headtbldetail tr td:nth-child(3),
+#headtbldetail tr td:nth-child(4)
+{width: 20%}
+#headtbldetail tr td:nth-child(5){width: 10%}
+#headtbldetail tr td:nth-child(6){width: 25%}
+
+#headtbldetail tr td:nth-child(2) input,
+#headtbldetail tr td:nth-child(3) input,
+#headtbldetail tr td:nth-child(4) input,
+#headtbldetail tr td:nth-child(5) input{text-align: center !important;}
+
+#headtbldetail tr td:nth-child(2),
+#headtbldetail tr td:nth-child(3),
+#headtbldetail tr td:nth-child(4),
+#headtbldetail tr td:nth-child(5),
+#headtbldetail tr td:nth-child(6){padding: 0px}
+
+#headtbldetail tr td input[type="text"],
+#headtbldetail tr td input[type="number"],
+.edittabellaporan tr td input[type="text"],
+.edittabellaporan tr td input[type="number"]{
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  border-radius: 0px !important;
+  border: none;
+  font-size: 16px;
+}
+
+.tabellaporan tr th:first-child{width: 10%;}
+.tabellaporan tr th:nth-child(2){width: 15%;}
+.tabellaporan tr th:nth-child(3){width: 15%;}
+.tabellaporan tr th:nth-child(4){width: 15%;}
+.tabellaporan tr th:nth-child(5){width: 15%;}
+.tabellaporan tr th:nth-child(6){width: 30%;}
+
+.tabellaporan tr td:first-child{width: 10%;}
+.tabellaporan tr td:nth-child(2){width: 15%;text-align: center;}
+.tabellaporan tr td:nth-child(3){width: 15%;text-align: right}
+.tabellaporan tr td:nth-child(4){width: 15%;text-align: right}
+.tabellaporan tr td:nth-child(5){width: 15%;text-align: left;padding:0px 5px}
+.tabellaporan tr td:nth-child(6){width: 10%;text-align: center;}
+.tabellaporan tr td:nth-child(7){width: 10%;text-align: center;}
+.tabellaporan tr td:nth-child(8){width: 10%;text-align: center;}
+
+
+
+.panel-ing{
+  width: calc(96% - 18px);
+  background-color: #ffdcd6;
+  border: 4px dashed #000;
+  margin: auto;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.panel-ing input{
+  font-size: 16px
+}
+
+.alldatavisibility tr th:first-child{width:5%}
+.alldatavisibility tr th:nth-child(2){width:5%}
+.alldatavisibility tr th:nth-child(3){width:65%}
+.alldatavisibility tr th:nth-child(4){width:10%}
+
+.alldatavisibility tr td:first-child{width:5%;text-align: center;}
+.alldatavisibility tr td:nth-child(2){width:5%;text-align: right;cursor: pointer;}
+.alldatavisibility tr td:nth-child(3){width:65%;text-align: left;cursor: pointer;}
+.alldatavisibility tr td:nth-child(4){
+  width:10%;text-align: center;
+  background-size: 35px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.option span{
+  float: right;
+}
+
+
+
+.option input[type="radio"],
+.option label{
+    cursor: pointer;
+}
+
+.option input[type="radio"]{
+  vertical-align: middle;
+}
+
+.option label{
+  font-size: 16px;
+}
+
+#btncari{
+  display: none;
+  float:right;
+  margin-left: 5px;
+}
+
+#refresh{
+  display: none;
+  float: right;
+  margin-right: 5px;
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  background-size: 25px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#editlaporan{
+  height: calc(100vh - 185px);
+}
+
+.edittabellaporan tr th:first-child{width: 5%;}
+.edittabellaporan tr th:nth-child(2){width: 30%;}
+.edittabellaporan tr th:nth-child(3){width: 15%;}
+.edittabellaporan tr th:nth-child(4){width: 15%;}
+.edittabellaporan tr th:nth-child(5){width: 20%;}
+.edittabellaporan tr th:nth-child(6){width: 15%;}
+
+.edittabellaporan tr td:first-child{width: 5%;text-align: center; padding:0px 5px !important}
+.edittabellaporan tr td:nth-child(2){width: 30%;padding: 0px}
+.edittabellaporan tr td:nth-child(3){width: 15%;padding: 0px}
+.edittabellaporan tr td:nth-child(4){width: 15%;padding: 0px}
+.edittabellaporan tr td:nth-child(5){width: 20%;padding:0px 5px !important;}
+.edittabellaporan tr td:nth-child(6){width: 15%;padding:0px !important}
+
+.edittabellaporan tr:last-child td:nth-child(6) input{
+  border-bottom-right-radius: 10px !important;
+}
+
+.ingredient tr th:frist-child{width: 5%}
+.ingredient tr th:nth-child(2){width: 35% !important}
+.ingredient tr th:nth-child(3){width: 10% !important}
+.ingredient tr th:nth-child(4){width: 10% !important}
+.ingredient tr th:nth-child(5){width: 30% !important;}
+.ingredient tr th:nth-child(6){width: 10% !important}
+
+.ingredient tr td:frist-child{width: 5%}
+.ingredient tr td:nth-child(2){width: 35% !important}
+.ingredient tr td:nth-child(3){width: 10% !important}
+.ingredient tr td:nth-child(4){width: 10% !important}
+.ingredient tr td:nth-child(5){width: 30% !important;}
+.ingredient tr td:nth-child(6){width: 10% !important}
+
+@media only screen and (max-width: 800px) {
+  .tabellaporan tr th:first-child,
+  .tabellaporan tr td:first-child{
+    display: none;
+  }
+
+  .tabellaporan tr th:nth-child(2){
+    border-top-left-radius: 10px;
+  }
+
+  .tabellaporan tr:last-child td:nth-child(2){
+    border-bottom-left-radius: 10px;
+  }
+}

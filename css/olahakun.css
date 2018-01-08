@@ -1,0 +1,149 @@
+#paneleditor{
+	margin: auto;
+	background-color: #e7e7e7;
+	border: 3px solid #000;
+	border-radius: 10px;
+	position: relative;
+	width: calc(50% - 6px);
+	min-width: 600px;
+	max-width: 800px;
+}
+
+#left,#right{
+	padding: 10px;
+	float: left;
+	position: relative;
+	z-index: 2;
+}
+
+#left{
+	width: 350px;
+}
+
+#right{
+	width: calc(100% - 390px);
+}
+
+.image-edit{
+  width : 350px;
+  min-width : 250px;
+  height: 300px;
+  min-height: 150px;
+  background-color : #fff;
+  border: 3px solid #000;
+}
+
+.image-option{
+  width : 330px;
+  min-width : 240px;
+  height: 30px;
+  padding : 10px;
+  background-color: #952828;
+  border : 3px solid #000;
+  border-top : none;
+}
+
+#path{
+  border-radius: 0;
+}
+
+.container_crop{
+  width : 98%;
+  margin: auto;
+  position : relative;
+  height : 80%;
+  background-color : #ddd;
+}
+
+#img{
+  width : 100%;
+  height: 100%;
+}
+
+.wrappop{
+  width : 350px;
+  height: 300px;
+  background-color: #2e2e2e;
+}
+
+
+.wrapper{
+  width: 528px;
+	padding: 5px;
+}
+
+.close{
+  right: -20px;
+  top: 5px;
+}
+
+#right fieldset{
+	text-align: left !important;
+	width: 100%;
+}
+
+#right input[type="text"],textarea{
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#right .panelradio{
+	width: calc(100% - 10px);
+	padding: 5px;
+	background-color: #fff;
+	border-radius: 10px;
+	border: 3px solid #000;
+	margin-bottom: 10px;
+}
+
+#right .panelradio label,
+#right .panelradio input[type="radio"]{
+	cursor: pointer;
+}
+
+#bottom{
+	width: calc(100% - 20px);
+	padding: 5px;
+	position: relative;
+	margin: auto;
+	margin-left: 5px;
+}
+
+#bottom textarea{
+	height: 100px;
+	z-index: 1;
+}
+
+.croppie-container .cr-slider-wrap{
+	margin: -150px 194px !important;
+}
+
+#panelganti{
+	width: calc(30% - 20px);
+	min-width: 250px;
+	padding: 10px;
+	background-color: #ddd;
+	border-radius: 10px;
+	border: 3px solid #000;
+	margin: auto;
+}
+
+#panelganti fieldset{
+	text-align: left;
+}
+
+#panelganti input{
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#paneldiri{
+	width: calc(50% - 36px);
+	min-width: 566px;
+	max-width: 764px;
+}
+
+#ganti{
+	width: calc(30% - 34px);
+	min-width: 234px;
+}

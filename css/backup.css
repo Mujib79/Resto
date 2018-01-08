@@ -1,0 +1,73 @@
+@page {
+  margin-top: 1cm;
+  margin-bottom: 2cm;
+  margin-left: 2cm;
+  margin-right: 2cm;
+  size: 8.27in 11.69in;
+}
+body{
+  margin:0 auto;
+}
+
+h1,h2{
+  font-family: calibri;
+  margin:0px;
+  padding:0px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+hr{
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+table{
+  margin: 0 auto;
+  width: auto;
+  border-collapse: collapse;
+  border: 2px solid #000;
+  width: 50%;
+}
+
+table tr th{
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px;
+  background-color: #e6e6e6;
+  border-bottom: 2px solid #000;
+}
+
+table tr th,table tr td{
+  text-align: center;
+  border-right: 2px solid #000;
+  font-family: calibri;
+}
+
+table tr th:last-child,table tr td:last-child{
+  border-right:none;
+}
+
+table tr td{
+  padding: 5px;
+  font-size: 13px;
+}
+
+table tr:nth-child(even) td{
+  background-color: #f1f1f1;
+}
+
+.belanjadetail tr th:first-child{width: 10%}
+.belanjadetail tr th:nth-child(2){width: 25%}
+.belanjadetail tr th:nth-child(3){width: 15%}
+.belanjadetail tr th:nth-child(4){width: 10%;}
+.belanjadetail tr th:nth-child(5){width: 20%;}
+.belanjadetail tr th:nth-child(6){width: 20%;}
+
+.belanjadetail tr td:first-child{width: 10%;text-align: right;}
+.belanjadetail tr td:nth-child(2){width: 25%;text-align: left;}
+.belanjadetail tr td:nth-child(3){width: 15%;text-align: right}
+.belanjadetail tr td:nth-child(4){width: 10%;}
+.belanjadetail tr td:nth-child(5){width: 20%;text-align: right}
+.belanjadetail tr td:nth-child(6){width: 20%;text-align: left}

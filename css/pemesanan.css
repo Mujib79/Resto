@@ -1,0 +1,292 @@
+#dashboard{
+  width: 100%;
+  position: relative;
+  float:left;
+  height: calc(100vh - 2px);
+  /*height: calc(100% - 2px);*/
+  background-color: #000;
+  overflow: hidden;
+}
+
+#dashboardbody,#pesanan{
+  width: calc(100% - 6vw);
+  height: calc(100% - 60px);
+  float:left;
+  position: relative;
+  background-color: #fff4de;
+  text-align: center;
+  padding: 10px 3vw;
+  overflow-y: auto;
+}
+
+#dashboardbody .dishpanel{
+  width: calc(25% - 13px);
+  height: 45%%;
+  position: relative;
+  margin-top: 10px;
+  background-color: #ddd;
+  border: 5px solid #000;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.order-table .prosesbtn{
+  background-size: 26px;
+  padding-left: 39px;
+}
+
+#infolist{
+  float: left;
+  font-family: subjudul;
+  font-size:24px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+#dashboardbody .dishpanel:hover{
+  box-shadow: 0px 0px 5px 5px #fff;
+}
+
+.dishpanel img{
+  width: 100%;
+  background-color: #fff;
+}
+
+#dashboardheader{
+  width: calc(100% - 10px);
+  padding: 5px;
+  float:left;
+  text-align: center;
+}
+
+#btnscroll{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+button{
+  cursor: pointer;
+}
+
+.kelompok_tipe{
+  margin-bottom: 30px;
+  background-color: #bfae9a;
+  border-radius: 15px;
+  padding: 0px 0px 10px 0px;
+}
+
+.title_tipe{
+  width: calc(100% - 10px);
+  padding: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: subjudul;
+  color: #fff;
+  background-color: #8c2020;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.info{
+  padding: 5px;
+  width: calc(100% - 10px);
+  background-color: #ffffcc;
+  border-top: 4px solid #000;
+  text-align: left;
+}
+
+.info table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info tr th{
+  font-family: calibri;
+  text-align: left;
+}
+
+.info tr:first-child th{
+  font-size: 100%;
+  border-bottom: 3px solid #000;
+}
+
+#opsi-pelanggan{
+  float: left;
+  margin-left: 146px;
+  position: relative;
+}
+
+#shsearch{
+  float: left !important;
+  margin-left: 10px;
+  width: 200px !important;
+}
+
+#shsearch input{
+  height: 43px;
+  max-height: none;
+}
+
+#opsi-pelanggan button{
+  background-size: 30px;
+  padding: 20px;
+  margin-left: 10px;
+  background-position: center;
+  font-size: 22px;
+  min-width: 0px;
+}
+
+.active{
+  background-color: #fff !important;
+}
+
+.order-table{
+  width: 100% !important;
+  height: calc(100vh - 158px) !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+#order-table tr th,
+#order-table tr td{
+  height: 45px;
+}
+
+#order-table tr td:first-child,
+#order-table tr td:nth-child(3){text-align: right}
+#order-table tr td:nth-child(4){ padding: 0px; text-align: center}
+#order-table tr td:nth-child(4) input{
+  max-height:none !important;
+  height: 100% !important;
+  width: 100% !important;
+  border-radius: 0px !important;
+  text-align: center;
+  padding-left: 21px;
+  opacity: 1;
+  background: #FFF;
+}
+
+
+#order-table tr th:first-child{width: 5%}
+#order-table tr th:nth-child(2){width: 30%}
+#order-table tr th:nth-child(3){width: 15%}
+#order-table tr th:nth-child(4){width: 10%}
+#order-table tr th:nth-child(5){width: 15%}
+#order-table tr th:nth-child(6){width: 15%}
+#order-table tr th:nth-child(7){width: 10%}
+
+#order-table tr td:first-child{width: 5%}
+#order-table tr td:nth-child(2){width: 30%}
+#order-table tr td:nth-child(3){width: 15%}
+#order-table tr td:nth-child(4){width: 10%}
+#order-table tr td:nth-child(5){width: 15%;text-align: right}
+#order-table tr td:nth-child(6){width: 15%;text-align: center;}
+#order-table tr td:nth-child(7){width: 5%;padding:0px 5px;text-align: center;}
+#order-table tr td:nth-child(8){width: 5%;padding:0px 5px;text-align: center;}
+
+#load{
+  margin-left: calc(50% - 108px) !important;
+  margin-top: calc(50vh - 85px) !important;
+}
+
+.wrapper{
+  width: 350px;
+  padding: 5px;
+}
+
+.wrapper textarea{
+  width: 100%;
+  font-size: 20px;
+}
+
+.close{
+  margin-left: 154px;
+  margin-top:-30px;
+}
+
+.judul{
+  top: auto !important;
+}
+
+.foot{
+  width: calc(100% - 18px);
+  text-align: right;
+  border: 4px solid #282828;
+  float: left;
+}
+
+.foot table{
+  float : right;
+}
+
+.foot table tr th,
+.foot table tr td{
+  font-size: 20px;
+}
+
+.foot tr th{text-align: right}
+.foot tr td:nth-child(2){text-align: right}
+.foot tr td{text-align: left}
+
+#perihal{
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+form{
+  text-align: left;
+}
+
+form textarea{
+  height: 80px;
+}
+
+.orderproses{
+  padding: 20px;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.iconprosesorder{
+  background-size: 30px !important;
+  background-position: center !important;
+  background-repeat: no-repeat;
+  background-color: none !important;
+  padding: 15px !important;
+}
+
+#notification{
+  padding: 2px 6px;
+  background-color: red;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: calibri;
+  margin-top: -23px;
+  margin-left: 10px;
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .dishpanel{
+    width: calc(33.333333% - 13px) !important;
+  }
+
+  #dashboardbody{
+    width: 100%;
+    padding: 10px 0px;
+  }
+
+  .kelompok_tipe{
+    border-radius: 0px;
+  }
+
+  .title_tipe{
+    border-radius: 0px;
+  }
+}

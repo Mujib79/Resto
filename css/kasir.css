@@ -1,0 +1,174 @@
+header{
+  position: relative !important;
+  min-width: 800px;
+}
+
+#panelkasir{
+  width: 100%;
+  min-width: 800px;
+  height: calc(100vh - 45px);
+  min-height: 555px;
+  margin: auto;
+  background-color: #000;
+}
+
+#left,#right{
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+#left{
+  width: 30%;
+  background-color: #fff;
+}
+
+#right{
+  width: calc(70% - 3px);
+  background-color: #ddd;
+  border-left: 3px solid #000;
+}
+
+.header{
+  width: calc(100% - 10px);
+  padding: 5px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: subjudul;
+  border-bottom: 3px solid #000;
+  background-color: #c06767;
+  color: #fff;
+  float: left;
+}
+
+#data-pembeli{
+  width: 100%;
+  height: calc(100% - 124px);
+  float: left;
+  background-image: url(../gambar/left_side.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow-y: auto;
+}
+
+.tabel-bayar{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabel-bayar tr th{
+  height: 35px;
+  background-color: #fff;
+  border-bottom: 3px solid #000;
+}
+
+.tabel-bayar tr th:first-child,
+.tabel-bayar tr td:first-child{
+  border-right: 4px solid #000;
+}
+
+.tabel-bayar tr:last-child td{
+  border-bottom: 4px solid #000;
+}
+
+.tabel-bayar tr td{
+  height: 30px;
+  padding: 0px 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tabel-bayar tr:hover td{
+  background-color: #fff !important;
+}
+
+.tabel-bayar tr:nth-child(odd) td{
+  background-color: #d8b502;
+}
+
+.tabel-bayar tr:nth-child(even) td{
+  background-color: #fce8ba;
+}
+
+.panel-info{
+  width: calc(100% - 20px);
+  padding: 10px;
+  background-color: #fffacb;
+  border-bottom: 4px solid #000;
+}
+
+.panel-info fieldset{
+  display: block;
+}
+
+#right .panel-info table{
+  float:none;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+#right .panel-info table tr th{
+  text-align: left;
+  font-size: 16px;
+  font-family: calibri
+}
+
+.isi{
+  min-width: 100px;
+}
+
+#calculate{
+  width: 100%;
+  height: calc(60% - 100px);
+  background-color: #fff;
+  border-bottom: 4px solid #000;
+}
+
+#calculate input{
+  border-radius: 0px !important;
+  height: 33.33%;
+  max-height:none;
+  width: 100%;
+  background-color: #fff;
+  font-size: 300%;
+  font-family: subjudul;
+  text-align: right;
+}
+
+.input-div label{
+  position: absolute;
+  z-index: 3;
+  margin-left: 10px;
+  margin-top: 13px;
+  font-size: 300%;
+  font-family: subjudul;
+  font-weight: bold;
+  opacity: 0.4;
+  cursor: text;
+}
+
+#detail-pesan tr td,
+#detail-pesan tr th{
+  border-right: 4px solid #000;
+}
+
+#detail-pesan tr td{
+  cursor: default;
+}
+
+#detail-pesan tr th:first-child{width: 45%;}
+#detail-pesan tr th:nth-child(2){width:15%}
+#detail-pesan tr th:nth-child(3){width:20%}
+#detail-pesan tr th:last-child{width:20%;border-right: none;}
+
+#detail-pesan tr td:first-child{width: 45%;text-align: left}
+#detail-pesan tr td:nth-child(2){width:15%}
+#detail-pesan tr td:nth-child(3){width:20%}
+#detail-pesan tr td:last-child{width:20%;border-right: none;}
+
+#wrap-detail-pesan{
+  width: 100%;
+  height: 40%;
+  overflow-y: auto;
+}
