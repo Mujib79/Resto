@@ -1,0 +1,118 @@
+body{
+	margin									: auto;
+	background-color 				: #fff9cb;
+
+}
+
+.content{
+	background-color			: #363636;
+	width									: 70%;
+	min-width							: 600px;
+	height								: 92.5%;
+	min-height						: 600px;
+	background-size				: 100% 100%;
+	position							: relative;
+	opacity								: 0.8;
+	padding-top						: 10px;
+	margin 								: auto;
+	float 								: left;
+	margin-left 					: 15%;
+	margin-top 						: 3%;
+}
+
+.form{
+	background-color 	: #bfb38d;
+	position 		: relative;
+	width : 50%;
+	padding : 0px 10px;
+	height 	: 100%;
+	border : 3px solid #000;
+	text-align: center;
+	float : left;
+}
+
+.subjudul{
+	font-size					: 34px;
+	font-family					: subjudul;
+	color						: #fffeee;
+	font-weight					: bold;
+	text-decoration				: underline;
+}
+
+
+
+table tr td{
+	font-weight : bold;
+}
+
+table{
+	margin-top  								: 19px;
+}
+
+form{
+	margin : auto;
+}
+
+fieldset{
+	border-radius				: 4px;
+	background					: #fff;
+	background					: -moz-linear-gradient(#fff, #f9fdff);
+	background					: -o-linear-gradient(#fff, #f9fdff);
+	background					: -webkit-linear-gradient(#fff, #f9fdff);
+	border-color				: rgba(4, 129, 177, 0.4);
+	width 							: 98%;
+	margin							: auto;
+	position 						: relative;
+	height 							: 97%;
+	padding 						: 0px;
+	border 							: none;
+}
+
+input[type="text"],.radio,select,textarea,
+input[type="password"]{
+	width 											: 100%;
+	text-transform						  : uppercase;
+}
+
+.radio{
+	color						: #8c6b14;
+}
+
+.radio>span{
+	color						: #373737;
+}
+
+.error{
+	color						: #cb0202;
+	padding-left				: 10px;
+}
+
+.formsandi{
+	width 				: 46.5%;
+	height 				: 100%;
+	background-color : #ddd;
+	position 	: absolute;
+	float : left;
+	border 				: 3px solid #000;
+	left 					: 53%;
+}
+
+.panelubah{
+	margin 							: auto;
+	width 							: 90%;
+	height 							: 36%;
+	min-height 					: 205px;
+	background-color 		: #363636;
+	margin-top 					: 20px;
+	text-align					: center;
+}
+
+.panelubah table{
+	padding 					: 10px;
+	width 						: 98%;
+	text-align				: center;
+}
+
+.panelubah table tr td{
+	color : #fff;
+}
