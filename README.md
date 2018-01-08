@@ -1,51 +1,70 @@
-This is the PHP port of Hamcrest Matchers
-=========================================
+## Illuminate Database
 
-[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/hamcrest/hamcrest-php/badges/quality-score.png?s=754f5c0556419fc6204917ca9a9dcf2fa2b45ed0)](https://scrutinizer-ci.com/g/hamcrest/hamcrest-php/)
-[![Build Status](https://travis-ci.org/hamcrest/hamcrest-php.png?branch=master)](https://travis-ci.org/hamcrest/hamcrest-php)
-[![Coverage Status](https://coveralls.io/repos/hamcrest/hamcrest-php/badge.png)](https://coveralls.io/r/hamcrest/hamcrest-php)
+The Illuminate Database component is a full database toolkit for PHP, providing an expressive query builder, ActiveRecord style ORM, and schema builder. It currently supports MySQL, Postgres, SQL Server, and SQLite. It also serves as the database layer of the Laravel PHP framework.
 
-Hamcrest is a matching library originally written for Java, but
-subsequently ported to many other languages.  hamcrest-php is the
-official PHP port of Hamcrest and essentially follows a literal
-translation of the original Java API for Hamcrest, with a few
-Exceptions, mostly down to PHP language barriers:
+### Usage Instructions
 
-  1. `instanceOf($theClass)` is actually `anInstanceOf($theClass)`
+First, create a new "Capsule" manager instance. Capsule aims to make configuring the library for usage outside of the Laravel framework as easy as possible.
 
-  2. `both(containsString('a'))->and(containsString('b'))`
-     is actually `both(containsString('a'))->andAlso(containsString('b'))`
+```PHP
+use Illuminate\Database\Capsule\Manager as Capsule;
 
-  3. `either(containsString('a'))->or(containsString('b'))`
-     is actually `either(containsString('a'))->orElse(containsString('b'))`
+$capsule = new Capsule;
 
-  4. Unless it would be non-semantic for a matcher to do so, hamcrest-php
-     allows dynamic typing for it's input, in "the PHP way". Exception are
-     where semantics surrounding the type itself would suggest otherwise,
-     such as stringContains() and greaterThan().
+$capsule->addConnection([
+    'driver'    => 'mysql',
+    'host'      => 'localhost',
+    'database'  => 'database',
+    'username'  => 'root',
+    'password'  => 'password',
+    'charset'   => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix'    => '',
+]);
 
-  5. Several official matchers have not been ported because they don't
-     make sense or don't apply in PHP:
+// Set the event dispatcher used by Eloquent models... (optional)
+use Illuminate\Events\Dispatcher;
+use Illuminate\Container\Container;
+$capsule->setEventDispatcher(new Dispatcher(new Container));
 
-       - `typeCompatibleWith($theClass)`
-       - `eventFrom($source)`
-       - `hasProperty($name)` **
-       - `samePropertyValuesAs($obj)` **
+// Make this Capsule instance available globally via static methods... (optional)
+$capsule->setAsGlobal();
 
-  6. When most of the collections matchers are finally ported, PHP-specific
-     aliases will probably be created due to a difference in naming
-     conventions between Java's Arrays, Collections, Sets and Maps compared
-     with PHP's Arrays.
-
-Usage
------
-
-Hamcrest matchers are easy to use as:
-
-```php
-Hamcrest_MatcherAssert::assertThat('a', Hamcrest_Matchers::equalToIgnoringCase('A'));
+// Setup the Eloquent ORM... (optional; unless you've used setEventDispatcher())
+$capsule->bootEloquent();
 ```
 
-  ** [Unless we consider POPO's (Plain Old PHP Objects) akin to JavaBeans]
-     - The POPO thing is a joke.  Java devs coin the term POJO's (Plain Old
-       Java Objects).
+> `composer require "illuminate/events"` required when you need to use observers with Eloquent.
+
+Once the Capsule instance has been registered. You may use it like so:
+
+**Using The Query Builder**
+
+```PHP
+$users = Capsule::table('users')->where('votes', '>', 100)->get();
+```
+Other core methods may be accessed directly from the Capsule in the same manner as from the DB facade:
+```PHP
+$results = Capsule::select('select * from users where id = ?', array(1));
+```
+
+**Using The Schema Builder**
+
+```PHP
+Capsule::schema()->create('users', function($table)
+{
+    $table->increments('id');
+    $table->string('email')->unique();
+    $table->timestamps();
+});
+```
+
+**Using The Eloquent ORM**
+
+```PHP
+class User extends Illuminate\Database\Eloquent\Model {}
+
+$users = User::where('votes', '>', 1)->get();
+```
+
+For further documentation on using the various database facilities this library provides, consult the [Laravel framework documentation](https://laravel.com/docs).
