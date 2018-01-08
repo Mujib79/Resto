@@ -1,56 +1,51 @@
-> You might also like [Caret](http://caret.io?ref=parsedown) - our Markdown editor for Mac / Windows / Linux.
+This is the PHP port of Hamcrest Matchers
+=========================================
 
-## Parsedown
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/hamcrest/hamcrest-php/badges/quality-score.png?s=754f5c0556419fc6204917ca9a9dcf2fa2b45ed0)](https://scrutinizer-ci.com/g/hamcrest/hamcrest-php/)
+[![Build Status](https://travis-ci.org/hamcrest/hamcrest-php.png?branch=master)](https://travis-ci.org/hamcrest/hamcrest-php)
+[![Coverage Status](https://coveralls.io/repos/hamcrest/hamcrest-php/badge.png)](https://coveralls.io/r/hamcrest/hamcrest-php)
 
-[![Build Status](https://img.shields.io/travis/erusev/parsedown/master.svg?style=flat-square)](https://travis-ci.org/erusev/parsedown)
-<!--[![Total Downloads](http://img.shields.io/packagist/dt/erusev/parsedown.svg?style=flat-square)](https://packagist.org/packages/erusev/parsedown)-->
+Hamcrest is a matching library originally written for Java, but
+subsequently ported to many other languages.  hamcrest-php is the
+official PHP port of Hamcrest and essentially follows a literal
+translation of the original Java API for Hamcrest, with a few
+Exceptions, mostly down to PHP language barriers:
 
-Better Markdown Parser in PHP
+  1. `instanceOf($theClass)` is actually `anInstanceOf($theClass)`
 
-[Demo](http://parsedown.org/demo) |
-[Benchmarks](http://parsedown.org/speed) |
-[Tests](http://parsedown.org/tests/) |
-[Documentation](https://github.com/erusev/parsedown/wiki/)
+  2. `both(containsString('a'))->and(containsString('b'))`
+     is actually `both(containsString('a'))->andAlso(containsString('b'))`
 
-### Features
+  3. `either(containsString('a'))->or(containsString('b'))`
+     is actually `either(containsString('a'))->orElse(containsString('b'))`
 
-* One File
-* Super Fast
-* Extensible
-* [GitHub flavored](https://help.github.com/articles/github-flavored-markdown)
-* Tested in 5.3 to 7.1 and in HHVM
-* [Markdown Extra extension](https://github.com/erusev/parsedown-extra)
+  4. Unless it would be non-semantic for a matcher to do so, hamcrest-php
+     allows dynamic typing for it's input, in "the PHP way". Exception are
+     where semantics surrounding the type itself would suggest otherwise,
+     such as stringContains() and greaterThan().
 
-### Installation
+  5. Several official matchers have not been ported because they don't
+     make sense or don't apply in PHP:
 
-Include `Parsedown.php` or install [the composer package](https://packagist.org/packages/erusev/parsedown).
+       - `typeCompatibleWith($theClass)`
+       - `eventFrom($source)`
+       - `hasProperty($name)` **
+       - `samePropertyValuesAs($obj)` **
 
-### Example
+  6. When most of the collections matchers are finally ported, PHP-specific
+     aliases will probably be created due to a difference in naming
+     conventions between Java's Arrays, Collections, Sets and Maps compared
+     with PHP's Arrays.
 
-``` php
-$Parsedown = new Parsedown();
+Usage
+-----
 
-echo $Parsedown->text('Hello _Parsedown_!'); # prints: <p>Hello <em>Parsedown</em>!</p>
+Hamcrest matchers are easy to use as:
+
+```php
+Hamcrest_MatcherAssert::assertThat('a', Hamcrest_Matchers::equalToIgnoringCase('A'));
 ```
 
-More examples in [the wiki](https://github.com/erusev/parsedown/wiki/) and in [this video tutorial](http://youtu.be/wYZBY8DEikI).
-
-### Questions
-
-**How does Parsedown work?**
-
-It tries to read Markdown like a human. First, it looks at the lines. It’s interested in how the lines start. This helps it recognise blocks. It knows, for example, that if a line starts with a `-` then perhaps it belongs to a list. Once it recognises the blocks, it continues to the content. As it reads, it watches out for special characters. This helps it recognise inline elements (or inlines).
-
-We call this approach "line based". We believe that Parsedown is the first Markdown parser to use it. Since the release of Parsedown, other developers have used the same approach to develop other Markdown parsers in PHP and in other languages.
-
-**Is it compliant with CommonMark?**
-
-It passes most of the CommonMark tests. Most of the tests that don't pass deal with cases that are quite uncommon. Still, as CommonMark matures, compliance should improve.
-
-**Who uses it?**
-
-[phpDocumentor](http://www.phpdoc.org/), [October CMS](http://octobercms.com/), [Bolt CMS](http://bolt.cm/), [Kirby CMS](http://getkirby.com/), [Grav CMS](http://getgrav.org/), [Statamic CMS](http://www.statamic.com/), [Herbie CMS](http://www.getherbie.org/), [RaspberryPi.org](http://www.raspberrypi.org/), [Symfony demo](https://github.com/symfony/symfony-demo) and [more](https://packagist.org/packages/erusev/parsedown/dependents).
-
-**How can I help?**
-
-Use it, star it, share it and if you feel generous, [donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=528P3NZQMP8N2).
+  ** [Unless we consider POPO's (Plain Old PHP Objects) akin to JavaBeans]
+     - The POPO thing is a joke.  Java devs coin the term POJO's (Plain Old
+       Java Objects).
