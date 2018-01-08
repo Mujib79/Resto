@@ -1,0 +1,7 @@
+/*
+ Quantcast measurement tag
+ Copyright (c) 2008-2017, Quantcast Corp.
+*/
+(function(c,h,g){try{__qc("defaults",c,{labels:"_fp.event.Default"})}catch(m){}var k=function(a,b,e){return a?"nc"===a?!b||!e||0>b.indexOf(e):"eq"===a?b===e:"sw"===a?0===b.indexOf(e):"ew"===a?(a=b.length-e.length,b=b.lastIndexOf(e,a),-1!==b&&b===a):"c"===a?0<=b.indexOf(e):!1:!1},l=function(a){var b=g.createElement("a");b.href=a;return b},f=function(a,b,e){var c;c=h.top===h.self?g.location.href:l(g.referrer).href;k(b,c,e)?a(c):a(!1)},d=function(a){return"array"==={}.toString.call(a).match(/\s([a-zA-Z]+)/)[1].toLowerCase()?
+{labels:a.join(",")}:{labels:""+a}};__qc("rules",[c,null,[[d,"_fp.event.Homepage"]],[[function(a,b,c){var d;d=h.top===h.self?g.location.pathname:l(g.referrer).pathname;k(b,d,c)?a(d):a(!1)},"eq","/"]]],[c,null,[[d,"_fp.event.Website Landing Page"]],[[f,"c","wordpress.com/website"]]],[c,null,[[d,"_fp.event.Easy Steps Landing Page"]],[[f,"c","wordpress.com/easy"]]],[c,null,[[d,"_fp.event.Create Landing Page"]],[[f,"c","wordpress.com/create"]]],[c,null,[[d,"_fp.event.Personal Landing Page"]],[[f,"c",
+"wordpress.com/personal"]]],[c,null,[[d,"_fp.event.Business Landing Page"]],[[f,"c","wordpress.com/business"]]],[c,null,[[d,"_fp.event.Brand Everywhere Landing Page"]],[[f,"c","wordpress.com/brand-everywhere"]]],[c,null,[[d,"_fp.event.Business Everywhere Landing Page"]],[[f,"c","wordpress.com/business-everywhere"]]],[c,null,[[d,"_fp.event.Remove Ads Landing Page"]],[[f,"c","wordpress.com/remove-ads"]]])})("p-3Ma3jHaQMB_bS",window,document);
